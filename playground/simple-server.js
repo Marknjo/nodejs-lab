@@ -5,12 +5,16 @@ import http from 'http';
 
 dotenv.config({ path: './config.env' });
 
-import { rename, stat } from 'fs/promises';
+import { rename, stat, access } from 'fs/promises';
 
 const from = `./tmp/hello`;
 const to = `./tmp/world`;
 
 try {
+  // Check if directory actually exists
+  await access(from);
+
+  // Rename file
   await rename(from, to);
   const stats = await stat(to);
   console.log(`stats: ${JSON.stringify(stats)}`);
@@ -33,3 +37,5 @@ server.listen(process.env.PORT, process.env.HOST, () => {
     `Server running... at http://${process.env.HOST}:${process.env.PORT}`
   );
 });
+
+export default server;
