@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-review",
+  "version": "1.0.0",
+  "description": "A simple stage to play with NodeJs, ExpressJs, MongoDB, and Mongoose",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "JavaScript",
+    "NodeJs",
+    "ExpressJs",
+    "MongoDB",
+    "and",
+    "Mongoose"
+  ],
+  "author": "Mark Njoroge",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0"
+  }
+}
